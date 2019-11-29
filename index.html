@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
           integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -13,26 +13,30 @@
     <div class="row">
         <div class="col-2 col_2_style">
             <div id="logo">
-                <img src="logo_left.png" alt="logo">
+                <img src="img/logo_left.png" alt="logo" id="logo_img">
             </div>
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Создать БД</a>
             </div>
             <div>
                 <div>
-                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo1" id="favBtn" onclick="fav()"><i id="favIcon" class="fa fa-plus icon_cl">  </i>database1</button>
+                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo1" id="favBtn"
+                            onclick="fav()"><i id="favIcon" class="fa fa-plus icon_cl"> </i>database1
+                    </button>
                     <div id="demo1" class="collapse clap">
                         <div class="accordion" id="accordion1">
 
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOneA1">
-                                        Collapsible Group 1
-                                    </a>
+                                    <button class="accordion-toggle fa fa-plus icon_cl btn btn-link" data-toggle="collapse" data-parent="#accordion1"
+                                       href="#collapseOneA1" id="favIcon11" onclick="fav11()"><b>TEXT 1</b>
+                                    </button>
                                 </div>
                                 <div id="collapseOneA1" class="accordion-body collapse">
                                     <div class="accordion-inner">
-                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche...
+                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim
+                                        pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur
+                                        cliche... Anim pariatur cliche...
                                     </div>
                                 </div>
                             </div>
@@ -41,20 +45,24 @@
                     </div>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo2" id="favBtn" onclick="fav1()"><i id="favIcon1" class="fa fa-plus icon_cl">  </i>database2
+                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo2" id="favBtn"
+                            onclick="fav1()"><i id="favIcon1" class="fa fa-plus icon_cl"> </i>database2
                     </button>
                     <div id="demo2" class="collapse clap">
                         <div class="accordion" id="accordion2">
 
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOneA2">
-                                        Collapsible Group 1
-                                    </a>
+                                    <button class="accordion-toggle fa fa-plus icon_cl btn btn-link" data-toggle="collapse" data-parent="#accordion2"
+                                       href="#collapseOneA2" id="favIcon22" onclick="fav22()">
+                                        <b>Info 2</b>
+                                    </button>
                                 </div>
                                 <div id="collapseOneA2" class="accordion-body collapse">
                                     <div class="accordion-inner">
-                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche...
+                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim
+                                        pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur
+                                        cliche... Anim pariatur cliche...
                                     </div>
                                 </div>
                             </div>
@@ -62,21 +70,25 @@
                         </div>
                     </div>
                 </div>
-                 <div>
-                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo3" id="favBtn" onclick="fav2()"><i id="favIcon2" class="fa fa-plus icon_cl">  </i>database3
+                <div>
+                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo3" id="favBtn"
+                            onclick="fav2()"><i id="favIcon2" class="fa fa-plus icon_cl"> </i>database3
                     </button>
                     <div id="demo3" class="collapse clap">
                         <div class="accordion" id="accordion3">
 
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOneA3">
-                                        Collapsible Group 1
-                                    </a>
+                                    <button class="accordion-toggle fa fa-plus icon_cl" id="favIcon33" data-toggle="collapse" data-parent="#accordion3"
+                                       href="#collapseOneA3" id="favIcon33" onclick="fav33()">
+                                       <b>info 3</b>
+                                    </button>
                                 </div>
                                 <div id="collapseOneA3" class="accordion-body collapse">
                                     <div class="accordion-inner">
-                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche...
+                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim
+                                        pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur
+                                        cliche... Anim pariatur cliche...
                                     </div>
                                 </div>
                             </div>
@@ -84,21 +96,25 @@
                         </div>
                     </div>
                 </div>
-                 <div>
-                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo4" id="favBtn" onclick="fav3()"><i id="favIcon3" class="fa fa-plus icon_cl">  </i>database4
+                <div>
+                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo4" id="favBtn"
+                            onclick="fav3()"><i id="favIcon3" class="fa fa-plus icon_cl "> </i>database4
                     </button>
                     <div id="demo4" class="collapse clap">
                         <div class="accordion" id="accordion4">
 
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseOneA4">
-                                        Collapsible Group 1
-                                    </a>
+                                    <button class="accordion-toggle fa fa-plus icon_cl btn btn-link" data-toggle="collapse" data-parent="#accordion4"
+                                       href="#collapseOneA4 " id="favIcon44" onclick="fav44()">
+                                        <b>info 4</b>
+                                    </button>
                                 </div>
                                 <div id="collapseOneA4" class="accordion-body collapse">
                                     <div class="accordion-inner">
-                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche...
+                                        Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim
+                                        pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur
+                                        cliche... Anim pariatur cliche...
                                     </div>
                                 </div>
                             </div>
@@ -110,25 +126,69 @@
         </div>
         <div class="col-10 col_10_style">
             <div class="container-fluid">
-                <div id="serverinfo"><p id="serverinfo_p"><i class="fa fa-desktop"></i>Сервер:127.0.0.1</p></div>
-                <div class="row menu_style">
-                    <button type="button" class="btn btn-outline-dark btn_style">Базы данных</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">SQL</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Состояние</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Учетные записи пользователей</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Экспорт</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Импорт</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Настройки</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Репликация</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Переменные</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Кодировки</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Типы таблицт</button>
-                    <button type="button" class="btn btn-outline-dark btn_style">Расширения</button>
+                <div class="row col_10_row_style">
+                    <div id="serverinfo">
+                        <p id="serverinfo_p"><i class="fa fa-desktop"></i>Сервер:127.0.0.1</p>
+                    </div>
+                    <nav class="navbar navbar-expand-sm navbar-light beck_g_lig" data-toggle="affix">
+                        <div class="mx-auto d-sm-flex d-block ">
+                            <div class="text-center" id="navbarsExample11">
+                                <ul class="navbar-nav flex-wrap">
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Базы&nbsp;данных
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">SQL</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Состояние
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Учетные&nbsp;записи&nbsp;пользователей
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Экспорт</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Импорт</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Настройки
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Репликация
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style ">Переменные
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Кодировки
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Типы&nbsp;таблиц
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-dark btn_style">Расширения
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
 
     </div>
+</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -150,7 +210,9 @@
             icon.classList.remove("fa-plus");
             icon.classList.add("fa-minus");
         }
-    }function fav1() {
+    }
+
+    function fav1() {
         var icon = document.getElementById("favIcon1");
         if (icon.classList.contains("fa-minus")) {
             icon.classList.remove("fa-minus");
@@ -159,7 +221,9 @@
             icon.classList.remove("fa-plus");
             icon.classList.add("fa-minus");
         }
-    }function fav2() {
+    }
+
+    function fav2() {
         var icon = document.getElementById("favIcon2");
         if (icon.classList.contains("fa-minus")) {
             icon.classList.remove("fa-minus");
@@ -168,8 +232,49 @@
             icon.classList.remove("fa-plus");
             icon.classList.add("fa-minus");
         }
-    }function fav3() {
+    }
+
+    function fav3() {
         var icon = document.getElementById("favIcon3");
+        if (icon.classList.contains("fa-minus")) {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+        } else {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        }
+    }
+
+    function fav11() {
+        var icon = document.getElementById("favIcon11");
+        if (icon.classList.contains("fa-minus")) {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+        } else {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        }
+    }function fav22() {
+        var icon = document.getElementById("favIcon22");
+        if (icon.classList.contains("fa-minus")) {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+        } else {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        }
+    }function fav33() {
+        var icon = document.getElementById("favIcon33");
+        if (icon.classList.contains("fa-minus")) {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+        } else {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        }
+    }
+    function fav44() {
+        var icon = document.getElementById("favIcon44");
         if (icon.classList.contains("fa-minus")) {
             icon.classList.remove("fa-minus");
             icon.classList.add("fa-plus");
