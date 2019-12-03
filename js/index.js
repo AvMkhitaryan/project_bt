@@ -327,40 +327,55 @@ function MyFUN1(arg) {
     // }
 }
 
-// function MyFUN2() {
-//     var x = document.querySelector(".text_block1");
-//     var z = document.querySelector(".text_none2");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//         z.style.display = "none";
-//     } else {
-//         x.style.display = "none";
-//         z.style.display = "block";
-//     }
-// }
-//
-// function MyFUN3() {
-//     var x = document.querySelector(".text_block1");
-//     var z = document.querySelector(".text_none3");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//         z.style.display = "none";
-//     } else {
-//         x.style.display = "none";
-//         z.style.display = "block";
-//     }
-// }
-// function MyFUN4() {
-//     var x = document.querySelector(".text_block1");
-//     var z = document.querySelector(".text_none4");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//         z.style.display = "none";
-//     } else {
-//         x.style.display = "none";
-//         z.style.display = "block";
-//     }
-// }
+function MyFUN2() {
+    var x = document.querySelector(".text_block1");
+    var z = document.querySelector(".text_none2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        z.style.display = "none";
+    } else {
+        x.style.display = "none";
+        z.style.display = "block";
+    }
+}
+
+function MyFUN3() {
+    var x = document.querySelector(".text_block1");
+    var z = document.querySelector(".text_none3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        z.style.display = "none";
+    } else {
+        x.style.display = "none";
+        z.style.display = "block";
+    }
+}
+
+function MyFUN4() {
+    var x = document.querySelector(".text_block1");
+    var z = document.querySelector(".text_none4");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        z.style.display = "none";
+    } else {
+        x.style.display = "none";
+        z.style.display = "block";
+    }
+}
 
 
+var arr = ["Базы данных", "SQL", "Состояние", "Учетные записи пользователей", "Экспорт", "Импорт", "Настройки", "Репликация", "Переменные", "Кодировки", "Тип таблиц", "Расширения"];
+var parent = document.getElementById('nav_li');
 
+for (var i in arr) {
+    var li = document.createElement('li');
+    // li.innerHTML = i;
+    parent.appendChild(li);
+    li.setAttribute('class', 'nav-item');
+    let but = document.createElement('button');
+    but.setAttribute('class', 'btn btn-outline-dark btn_style');
+    but.setAttribute('type', 'button');
+    but.innerText = arr[i];
+    li.appendChild(but);
+
+ }
