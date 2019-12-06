@@ -1,26 +1,3 @@
-// function fav(argumnet) {
-//     var icon = document.getElementById("favIcon"+ (+i + 1));
-//     console.log(icon);
-//     if (argument === i) {
-//         if (icon.classList.contains("fa-minus")) {
-//             icon.classList.remove("fa-minus");
-//             icon.classList.add("fa-plus");
-//         } else {
-//             icon.classList.remove("fa-plus");
-//             icon.classList.add("fa-minus");
-//         }
-//     }
-// }
-
-// function fav(argument) {
-//     if (argument === 1) {
-        // let icon_plus = document.getElementsByTagName('i')[0];
-        // let btn = document.getElementById('favBtn1');
-        // btn.setAttribute('class', 'btn btn-link fa fa-minus');
-    // }
-// }
-
-
 function myFUN1(arg) {
     var container = document.getElementsByClassName('col_7_col_5');
     if (arg === 0) {
@@ -149,141 +126,108 @@ function myFUN1(arg) {
 
 
         `
-    }
-    if (arg === 1) {
-        container[0].innerHTML = `
-                             <div class="row text_none1">
-                            <h1>Table 1</h1>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>Fir1stname</th>
-                                    <th>Las1tname</th>
-                                    <th>A1ge</th>
-                                </tr>
-                                <tr>
-                                    <td>Jill</td>
-                                    <td>Smith</td>
-                                    <td>501</td>
-                                </tr>
-                                <tr>
-                                    <td>Eve</td>
-                                    <td>Ja1ckson</td>
-                                    <td>914</td>
-                                </tr>
-                            </table>
-                        </div>
+    }else{
 
-        `
-    }
-    if (arg === 2) {
-        container[0].innerHTML = `
-                             <div class="row text_none2">
-                            <h1>Table 2</h1>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>Fir2stname</th>
-                                    <th>Las2tname</th>
-                                    <th>Age</th>
-                                </tr>
-                                <tr>
-                                    <td>Jill</td>
-                                    <td>Smi2th</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>E2ve</td>
-                                    <td>Jackson</td>
-                                    <td>94</td>
-                                </tr>
-                            </table>
-                        </div>
+        container[0].innerHTML="";
+        for (var ob in myObj){
 
-        `
-    }
-    if (arg === 3) {
-        container[0].innerHTML = `
-                            <div class="row text_none2">
-                            <h1>Table 3</h1>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>Fir2stname</th>
-                                    <th>Las2tname</th>
-                                    <th>Age</th>
-                                </tr>
-                                <tr>
-                                    <td>Jildtyjl</td>
-                                    <td>Smi2th</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>E2ve</td>
-                                    <td>Jackson</td>
-                                    <td>94</td>
-                                </tr>
-                            </table>
-                        </div>
+            var tit = document.createElement("h3");
+            tit.innerText = myObj[ob].name;
+            container[0].appendChild(tit);
 
-        `
-    }
-    if (arg === 4) {
-        container[0].innerHTML = `
-                            <div class="row text_none2">
-                            <h1>Table 4</h1>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>Fir2stname</th>
-                                    <th>Lasgfh2tname</th>
-                                    <th>Age</th>
-                                </tr>
-                                <tr>
-                                    <td>Jill</td>
-                                    <td>Smigh2th</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>E2ve</td>
-                                    <td>Jackson</td>
-                                    <td>94</td>
-                                </tr>
-                            </table>
-                        </div>
+            var tables = document.createElement("table");
+            tables.setAttribute("style", "width:100%");
+            container[0].appendChild(tables);
 
-        `
-    }
-    if (arg === 5) {
-        container[0].innerHTML = `
-                            <div class="row text_none2">
-                            <h1>Table 5</h1>
-                            <table style="width:100%">
-                                <tr>
-                                    <th>Fir255stname</th>
-                                    <th>Las5gfh2tname</th>
-                                    <th>Ag55e</th>
-                                </tr>
-                                <tr>
-                                    <td>Ji55ll</td>
-                                    <td>Smi55gh2th</td>
-                                    <td>5055</td>
-                                </tr>
-                                <tr>
-                                    <td>E552ve</td>
-                                    <td>Ja55ckson</td>
-                                    <td>9554</td>
-                                </tr>
-                            </table>
-                        </div>
+            var trone= document.createElement('tr');
+            tables.appendChild(trone);
 
-        `
+            var th =document.createElement('th');
+            th.innerHTML=myObj[ob].title;
+            trone.appendChild(th);
+
+            var trtwo= document.createElement('tr');
+            tables.appendChild(trtwo);
+
+            var tdone = document.createElement('td');
+            td.innerHTML=myObj[ob].tabelRow1;
+            trtwo.appendChild(td);
+
+            var tdtwo = document.createElement('td');
+            td.innerHTML=myObj[ob].tabelRow2;
+            trtwo.appendChild(td);
+
+            var tdthree = document.createElement('td');
+            td.innerHTML=myObj[ob].tabelRow3;
+            trtwo.appendChild(td);
+
+        }
     }
 
 }
 
+var myObj = [
+    {
+        name: 'database1',
+        title:'title1',
+        tabelRow1: 'info for database1 tableRow1',
+        tabelRow2: 'info for database1 tableRow2',
+        tabelRow3: 'info for database1 tableRow3'
+    },
+    // {
+    //     name: 'database2',
+    //     title:'title2',
+    //     tabelRow1: 'info for database2 tableRow1',
+    //     tabelRow2: 'info for database2 tableRow2',
+    //     tabelRow3: 'info for database2 tableRow3'
+    // },
+    // {
+    //     name: 'database3',
+    //     title:'title3',
+    //     tabelRow1: 'info for database3 tableRow1',
+    //     tabelRow2: 'info for database3 tableRow2',
+    //     tabelRow3: 'info for database3 tableRow3'
+    // },
+    // {
+    //     name: 'database4',
+    //     title:'title4',
+    //     tabelRow1: 'info for database4 tableRow1',
+    //     tabelRow2: 'info for database4 tableRow2',
+    //     tabelRow3: 'info for database4 tableRow3'
+    // },
+    // {
+    //     name: 'database5',
+    //     title:'title5',
+    //     tabelRow1: 'info for database5 tableRow1',
+    //     tabelRow2: 'info for database5 tableRow2',
+    //     tabelRow3: 'info for database5 tableRow3'
+    // }
+];
+
+var tbId = document.getElementsByClassName("row text_block1");
+
+// function tableCreate() {
+//
+//     var tit = document.createElement("h1");
+//     tit.innerHTML = 'dfhsh';
+//     tbId.appendChild(tit);
+//
+//     var tables = document.createElement("table");
+//     tables.setAttribute("style", "width:100%");
+//     tbId.appendChild(tables);
+//
+//     var tr = document.createElement("tr");
+//     tr.appendChild(tables);
+//
+//     var td = document.createElement('td');
+//     td.innerHTML = 'sdfhsdfhsdh';
+//     tr.appendChild(td);
+// }
 
 var arr = ["Базы данных", "SQL", "Состояние", "Учетные записи пользователей", "Экспорт", "Импорт", "Настройки", "Репликация", "Переменные", "Кодировки", "Тип таблиц", "Расширения"];
 var parent = document.getElementById('nav_li');
 
 for (var i in arr) {
-
     var li = document.createElement('li');
     li.setAttribute('class', 'nav-item');
     parent.appendChild(li);
@@ -296,7 +240,11 @@ for (var i in arr) {
 
 }
 
-var Dtb = ["database1", "database2", "database3", "database4", "database5"];
+// var Dtb = ["database1", "database2", "database3", "database4", "database5"];
+var Dtb =[];
+for (z in myObj){
+    Dtb.push(myObj[z].name);
+}
 var par = document.getElementById("col_2_div");
 
 for (var i in Dtb) {
@@ -348,7 +296,6 @@ for (var i in Dtb) {
     button3.setAttribute("href", "#collapseOneA" + (+i + 1));
     button3.setAttribute("id", 'favIcon' + (+i + 1));
     button3.setAttribute("aria-expanded", 'false');
-    // button3.setAttribute("onclick", "fav(" + (+i + 1) + ")");
     button3.innerHTML = "Text" + (+i + 1);
     div4.appendChild(button3);
 
@@ -361,41 +308,14 @@ for (var i in Dtb) {
     div6.setAttribute('class', 'accordion-inner');
     div6.innerHTML = ` <p>Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... Anim pariatur cliche... </p>`;
     div5.appendChild(div6);
-  //   par.innerHTML+=`<div class="accordion" id="accordionExample${i}">
-  //       <div class="card">
-  //       <div class="card-header" id="headingOne${i}">
-  //       <h5 class="mb-0">
-  //       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne${i}" aria-expanded="true" aria-controls="collapseOne${i}">
-  //       Collapsible Group Item #${i}
-  //   </button>
-  //   </h5>
-  //   </div>
-  //
-  //   <div id="collapseOne${i}" class="collapse" aria-labelledby="headingOne${i}" data-parent="#accordionExample${i}">
-  //       <div class="card-body">
-  //               <div class="card">
-  //   <div class="card-header" id="headingTwo${i}">
-  //     <h5 class="mb-0">
-  //       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo${i}" aria-expanded="false" aria-controls="collapseTwo${i}">
-  //         Collapsible Group Item Tow#${i}
-  //       </button>
-  //     </h5>
-  //   </div>
-  //   <div id="collapseTwo${i}" class="collapse" aria-labelledby="headingTwo${i}" data-parent="#collapseOne${i}">
-  //     <div class="card-body">
-  //       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-  //     </div>
-  //   </div>
-  // </div>
-  //       </div>
-  //   </div>
-  //   </div>`
-
-
 }
+
 $(document).on('click', '.test', function () {
     $(this).toggleClass('fa-minus');
+
 });
 $(document).on('click', '.test1', function () {
     $(this).toggleClass('fa-minus');
 });
+
+
